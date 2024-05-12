@@ -3,7 +3,7 @@
 <h3>ENTER YOUR NAME: RAGUL E</h3>
 <h3>ENTER YOUR REGISTER NO: 212221043005</h3>
 <h3>EX. NO: 3</h3>
-<h3>DATE: </h3>
+<h3>DATE:12.03.2024 </h3>
 <h1> <align=center> PARALLEL REDUCTION USING UNROLLING TECHNIQUES </h3>
   Refer to the kernel reduceUnrolling8 and implement the kernel reduceUnrolling16, in which each thread handles 16 data blocks. Compare kernel performance with reduceUnrolling8 and use the proper metrics and events with nvprof to explain any difference in performance.</h3>
 
@@ -51,7 +51,7 @@ Memory Deallocation
 
 ## PROGRAM:
 ## UNROLLING 8:
-```
+```c
 !pip install git+https://github.com/andreinechaev/nvcc4jupyter.git
 %load_ext nvcc4jupyter
 %%cuda
@@ -265,7 +265,7 @@ __global__ void reduceUnrolling8(int *g_idata, int *g_odata, unsigned int n)
 }
 ```
 ## UNROLLING 16:
-```
+```c
 ## %%cuda
 #include <cuda_runtime.h>
 #include <stdio.h>
